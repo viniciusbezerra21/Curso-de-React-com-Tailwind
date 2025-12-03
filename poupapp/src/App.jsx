@@ -1,11 +1,14 @@
+import Card from "./components/Card";
+import styles from "./components/app.module.css"
+
 import { Container } from "./components/Container";
 import { Aside } from "./components/Aside";
 import { Main } from "./components/Main";
 import { SearchInput } from "./components/SearchInput";
 import { Typography } from "./components/Typography";
 import { DailyBudget } from "./components/DailyBudget";
-
-import  Card  from "./components/Card";
+import { SavingStatus } from "./components/SavingsStatus";
+import { Transactions } from "./components/Transactions";
 
 
 function App() {
@@ -13,12 +16,13 @@ function App() {
     <Container>
       <Aside />
       <Main>
+        <div className={styles.container}>
         <SearchInput />
         <div>
          <Typography variant='h1'>Olá, Vini!</Typography>
          <Typography variant='body'>Veja como estão as suas finanças</Typography>
         </div>
-        <section>
+        <section className={styles.grid}>
           <Card>
             <Card.Header>
               Orçamento diário disponível:
@@ -29,10 +33,18 @@ function App() {
           </Card>
           <Card>
             <Card.Header>
-              Orçamento diário disponível:
+              Progresso da meta financeira
             </Card.Header>
             <Card.Body>
-              R$200
+              <SavingStatus percent={40}/>
+            </Card.Body>
+          </Card>
+          <Card>
+            <Card.Header>
+              Movimentação financeira
+            </Card.Header>
+            <Card.Body>
+              <Transactions />
             </Card.Body>
           </Card>
           <Card>
@@ -40,18 +52,11 @@ function App() {
               Orçamento diário disponível:
             </Card.Header>
             <Card.Body>
-              R$200
-            </Card.Body>
-          </Card>
-          <Card>
-            <Card.Header>
-              Orçamento diário disponível:
-            </Card.Header>
-            <Card.Body>
-              R$200
+              <p>R$200</p>
             </Card.Body>
           </Card>
         </section>
+        </div>
       </Main>
     </Container>
   );
