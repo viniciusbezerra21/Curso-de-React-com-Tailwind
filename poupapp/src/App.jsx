@@ -53,6 +53,11 @@ function App() {
             </Card.Header>
             <Card.Body>
               <p>R$200</p>
+              <p>R$200</p>
+              <p>R$200</p>
+              <p>R$200</p>
+              <p>R$200</p>
+              <p>R$200</p>
             </Card.Body>
           </Card>
         </section>
