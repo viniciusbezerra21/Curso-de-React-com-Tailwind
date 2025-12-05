@@ -10,7 +10,7 @@ export const TransactionItem = ({ item }) => {
 
     return (
         <div className={styles.transaction}>
-            <div className={[styles.details, detailsAddictionalClassName]}>
+            <div className={[styles.details, detailsAddictionalClassName].join(' ')}>
                 <p>{item.description}</p>
                 <p>{formatter.format(item.value)}</p>
             </div>

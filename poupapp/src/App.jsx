@@ -9,6 +9,7 @@ import { Typography } from "./components/Typography";
 import { DailyBudget } from "./components/DailyBudget";
 import { SavingStatus } from "./components/SavingsStatus";
 import { Transactions } from "./components/Transactions";
+import { Acounts } from "./components/Acounts";
 
 
 function App() {
@@ -52,12 +53,7 @@ function App() {
               Orçamento diário disponível:
             </Card.Header>
             <Card.Body>
-              <p>R$200</p>
-              <p>R$200</p>
-              <p>R$200</p>
-              <p>R$200</p>
-              <p>R$200</p>
-              <p>R$200</p>
+              <Acounts />
             </Card.Body>
           </Card>
         </section>
